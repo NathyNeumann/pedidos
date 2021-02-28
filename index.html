@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Pedidos</title>
+</head>
+
+<body>
+   
+    <div class="container">
+         <!--CABEÇALHO NUMERO PEDIDO E BOTAO NOVO PEDIDO-->
+        <div class="card">
+            <div class="card-header">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                         <h1 class="card-title">Pedidos</h1>
+                    </div>
+                    <div class="inputDiv">
+                        
+                    <div class="form-group col-md-5">
+                        <label for="staticEmail2" >Número:</label>
+                        <input type="text" class="form-control-plaintext " disabled id="numPedido" placeholder="0003">
+                   </div>
+                   
+                    </div>
+                    <div class="form-group col-md-1">
+                        <button id="novoPedido"> NOVO PEDIDO</button>
+                   </div>
+                </div>
+
+            </div>
+        </div>
+<!--CLIENTE-->
+        <section>
+            <h5>Dados do Cliente</h5>
+            <div class="cliente">
+                <!--radio novo ou localizar cliente-->
+                <div class="radioDiv" id="radioDiv">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Novo Cadastro</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Cliente já cadastrado</label>
+                    </div>
+                </div>
+
+                <!--campos cliente -->
+                <div class="inputDiv">
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="idCliente">ID Cliente:</label>
+                            <input type="text" class="form-control-plaintext" id="idCliente" placeholder="0003" disabled>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="idCpf">CPF:</label>
+                            <input type="number" class="form-control-plaintext" id="idCpf" disabled
+                                placeholder="0000000000">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="idNome">Cliente:</label>
+                            <input type="text" class="form-control-plaintext" id="idNome" disabled
+                                placeholder="0000000000">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="idTel">Telefone:</label>
+                            <input type="text" class="form-control-plaintext" id="idTel" disabled
+                                placeholder="0000000000">
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!--botões clientes-->
+        <section>
+            <div class="bt">
+                <button id="SalvarCliente" class="float-md-right">Salvar Cliente no Pedido</button>
+                <button id="localiza" class="float-md-right">Localizar Cliente</button>
+            </div>
+        </section>
+<!--ITENS PEDIDOS-->
+        <section>
+            <h5>Itens do Pedido</h5>
+            <div class="itens">
+                <table id="tabelaPedido" class="table table-hover">
+                    <thead>
+                        <tr class="row">
+                            <th class="col-2">Cod. Produto</th>
+                            <th class="col-7">Descrição</th>
+                            <th class="col-1">Valor Unitário</th>
+                            <th class="col-1">Qunt</th>
+                            <th class="col-1">Valor</th>
+                        </tr>
+                    </thead>
+                    
+                    
+                </table>
+            </div>
+            <div class="bt">
+                <button  id="addItem" class="float-md-right">Adicionar item no carrinho</button>
+                <button id="limpaCarrinho" class="float-md-right">Limpar carrinho</button>
+            </div>
+        </section>
+        <!--ADD item-->
+        <section id="add" hidden>
+            <h5>Adicionar Item</h5>
+            <div class="adicionar inputDiv">
+               
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="idCodItem">Código:</label>
+                        <input type="text" class="form-control-plaintext" id="idCodItem"
+                            placeholder="0000000000">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="idDescriItem">Descrição do produto:</label>
+                        <input type="text" class="form-control-plaintext" id="idDescriItem"
+                            placeholder="0000000000">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="idValItem">Valor:</label>
+                        <input type="text" class="form-control-plaintext" id="idValItem"
+                            placeholder="0000000000">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="idQntItem">Quantidade:</label>
+                        <input type="text" class="form-control-plaintext" id="idQntItem"
+                            placeholder="0000000000">
+                    </div>
+                </div>
+            </div>
+            <!--botao salar item-->
+            <div class="bt">
+                <button id="salvaItem" class="float-md-right">Salvar item no pedido</button>
+            </div>
+        </section>
+
+
+
+<!--TOTAL A PAGAR-->
+        <section>
+            <div class="form-row total">
+               
+                <div class="form-group col-md-6">
+                    <label for="valorTotal">
+                        <h5>Valor Total:  </h5>
+                    </label>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control"  id="valorTotal" disabled>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="Cliente.js"></script>
+    <script src="Pedido.js"></script>
+    <script src="Item.js"></script>
+    <script src="script.js"></script>
+</body>
+<script>
+
+</script>
+</html>

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Syne+Mono&display=swap');
+
+
+*{
+    font-family: 'Syne Mono', monospace;
+    color: #47443C;
+    font-size: 0.8rem;
+}
+body{
+    background-color: #A3D0B0;
+}
+.container{
+    background-color: #F6F6D6 ;
+    margin: 80px auto;
+    padding: 20px 15px;
+    box-shadow: 3px 2px 20px 8px rgba(0, 0, 0, 0.4);
+}
+h1{
+    font-size: 6rem;
+}
+.card-header{
+    background-color: #F6F6D6 ;
+    border: none;
+}
+h5{
+    margin: 30px 40px;
+    font-size: 2.8rem;
+}
+.cliente{
+    border: 5px dotted black;
+    margin: 20px 30px;
+    padding: 20px;
+}
+.cliente .form-control-plaintext{
+   font-size: 2rem;
+}
+.radioDiv label, input {
+   font-size: 2.2rem;
+   margin-bottom: 30px;
+   margin-right: 15px;
+}
+.radioDiv input{
+    text-align: right;
+}
+.inputDiv label{
+    font-size: 1.8rem;
+}
+.inputDiv .form-control-plaintext{
+    border-bottom: 2px solid black;
+    font-size: 1.8rem;
+    text-align: right;
+    color: rgb(7, 7, 117);
+    font-family: 'Indie Flower', cursive;
+}
+.inputDiv .form-control-plaintext:disabled{
+    background-color: #afaf92;
+    border-bottom: none;
+    border-radius: 20px;
+    padding: 8px;
+}
+.itens{
+    margin: 20px 40px;
+    padding: 20px;
+}
+.itens .table th, td{
+    font-size: 1.5rem;
+}
+.adicionar{
+    margin: 20px 30px;
+    padding: 20px;
+    border: 5px dotted darkgrey;
+}
+button{
+   
+   font-size: 1.3rem;
+    align-items: right;
+    background-color:#F6F6D6 ;
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button:hover{
+    background-color:#d3d3b9 ;
+    border: 2px solid rgb(134, 132, 132);
+}
+button:focus{
+    
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+        border: 2px solid rgb(116, 116, 116);
+    
+}
+
+#add h5{
+    margin-top: 80px;
+}
+.bt{
+    margin-right: 30px;;
+}
+#numPedido{
+    color: rgb(104, 18, 18);
+    font-family: 'Syne Mono', monospace;;
+}
+
+.total h5{
+    color: rgb(104, 18, 18);
+    justify-content:  right;
+    
+}
+#valorTotal{
+    width: 100%;
+    height: 80%;
+    text-align: left;
+    color: rgb(7, 7, 117);
+    font-size: 4.8rem;
+    background-color: #F6F6D6;
+    border: none;
+    font-family: 'Indie Flower', cursive;
+    border-bottom: 1px dotted black;
+}
+#novoPedido{
+    padding: 30px 15px;
+}
